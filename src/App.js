@@ -8,13 +8,13 @@ import { Switch } from 'react-router-dom';
 
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
-import AppBar from './Components/AppBar/AppBar';
+import AppBar from './components/AppBar/AppBar';
 
 const HomePage = lazy(() =>
   import('./Components/AppBar/HomePage' /* webpackChunkName: "homePage" */),
 );
 const Contacts = lazy(() =>
-  import('./Components/Contacts' /* webpackChunkName: "contacts" */),
+  import('./components/Contacts' /* webpackChunkName: "contacts" */),
 );
 const Login = lazy(() =>
   import('./Components/Login/Login' /* webpackChunkName: "Login" */),
