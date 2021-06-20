@@ -11,3 +11,4 @@ export const getUniqContact = createSelector(
     );
   },
 );
+// npm i reselect
