@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 
 import styles from './Filter.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import * as actions from '../../Redux/Phone/phone-actions';
-import { getFilter } from '../../Redux/Phone/phone_selector';
+import * as actions from '../../redux/phoneBook/actions';
+import { getFilter } from '../../redux/phoneBook/phoneSelector';
 
 const Filter = () => {
   const dispatch = useDispatch();

@@ -1,36 +1,49 @@
-import { combineReducers, createReducer } from "@reduxjs/toolkit";
-import * as actions from "./actions";
+import { combineReducers } from 'redux';
+import { createReducer } from '@reduxjs/toolkit';
+import { createSelector } from 'reselect';
+import {
+  getContactsSuccess,
+  addSuccess,
+  deleteChangeSuccess,
+  filterChange,
+  getContactsRequest,
+  getContactsFailure,
+  addContactsRequest,
+  addFailure,
+  deleteChangeFailure,
+  deleteContactsRequest,
+} from './phone-actions';
 
 const items = createReducer([], {
-  [actions.getContactsSuccess]: (_, { payload }) => payload,
-  [actions.addContactSuccess]: (state, { payload }) => [...state, payload],
+  [getContactsSuccess]: (_, { payload }) => payload,
+  [addSuccess]: (state, { payload }) => [...state, payload],
 
-  [actions.deleteContactSuccess]: (state, { payload }) => [
+  [deleteChangeSuccess]: (state, { payload }) => [
     ...state.filter(({ id }) => id !== payload),
   ],
 });
 
 const error = createReducer(null, {});
-const filter = createReducer("", {
-  [actions.filterContacts]: (state, { payload }) => payload,
+const filterReducer = createReducer('', {
+  [filterChange]: (state, { payload }) => payload,
 });
 
 const loading = createReducer(false, {
-  [actions.getContactsRequest]: () => true,
-  [actions.getContactsSuccess]: () => false,
-  [actions.getContactsError]: () => false,
-  [actions.addContactRequest]: () => true,
-  [actions.addContactSuccess]: () => false,
-  [actions.addContactError]: () => false,
-  [actions.deleteContactRequest]: () => true,
-  [actions.deleteContactSuccess]: () => false,
-  [actions.deleteContactError]: () => false,
-  [actions.filterContacts]: () => false,
+  [getContactsRequest]: () => true,
+  [getContactsSuccess]: () => false,
+  [getContactsFailure]: () => false,
+  [addContactsRequest]: () => true,
+  [addSuccess]: () => false,
+  [addFailure]: () => false,
+  [filterChange]: () => false,
+  [deleteContactsRequest]: () => true,
+  [deleteChangeSuccess]: () => false,
+  [deleteChangeFailure]: () => false,
 });
 
 export default combineReducers({
   items,
-  filter,
+  filter: filterReducer,
   error,
   loading,
 });

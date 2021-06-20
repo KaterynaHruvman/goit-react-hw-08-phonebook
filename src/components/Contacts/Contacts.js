@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { getContact } from '../../Redux/Phone/operationApi';
+import { getContact } from '../../redux/phoneBook/phoneApiOperations';
 
 import FormPhonebook from '../PhoneBook';
 import ContactItem from '../ContactItem';
-import Filter from '../Filter';
-import Section from '../Section';
+import Filter from '../Filter/Filter';
+import Section from '../Section.jsx';
 
 const Contacts = () => {
   const dispatch = useDispatch();
