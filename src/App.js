@@ -2,7 +2,7 @@ import { useEffect, Suspense, lazy } from 'react';
 import './App.css';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Section from './components/Section';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { getUser } from './redux/auth/auth_operations';
 import { Switch } from 'react-router-dom';
 
