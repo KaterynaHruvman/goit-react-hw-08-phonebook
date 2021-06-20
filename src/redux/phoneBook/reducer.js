@@ -12,7 +12,7 @@ import {
   addFailure,
   deleteChangeFailure,
   deleteContactsRequest,
-} from './phone-actions';
+} from './actions.js';
 
 const items = createReducer([], {
   [getContactsSuccess]: (_, { payload }) => payload,

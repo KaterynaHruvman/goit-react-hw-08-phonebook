@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './Register.module.css';
 import { useDispatch } from 'react-redux';
-import { register } from '../../Redux/auth/operation_auth';
+import { register } from '../../redux/auth/auth_operations';
 
 const Register = () => {
   const dispatch = useDispatch();

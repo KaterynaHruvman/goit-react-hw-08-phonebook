@@ -8,7 +8,7 @@ import {
   deleteContactsRequest,
   deleteChangeSuccess,
   deleteChangeFailure,
-} from './phone-actions';
+} from './actions';
 import axios from 'axios';
 
 export const getContact = () => async dispatch => {

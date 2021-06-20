@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { getUserEmail } from '../../Redux/auth/auth_selector';
+import { getUserEmail } from '../../redux/auth/auth_selector';
 import { logOut } from '../../redux/auth/auth_operations';
 import styles from '../../Routes/Route.module.css';
 

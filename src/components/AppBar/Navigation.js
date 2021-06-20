@@ -1,12 +1,12 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import styles from "./AppBar.module.css";
-import { useSelector } from "react-redux";
-import phoneBook from "../../image/3.png";
-import { getIsAuthenticated } from "../../Redux/auth/auth_selector";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import styles from './AppBar.module.css';
+import { useSelector } from 'react-redux';
+import phoneBook from '../../image/3.png';
+import { getIsAuthenticated } from '../../redux/auth/auth_selector';
 
 const Navigation = () => {
-  const isLoginOn = useSelector((state) => getIsAuthenticated(state));
+  const isLoginOn = useSelector(state => getIsAuthenticated(state));
   return (
     <nav className={styles.nav}>
       <NavLink

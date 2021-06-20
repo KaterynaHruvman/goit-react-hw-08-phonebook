@@ -1,7 +1,7 @@
 import { useEffect, Suspense, lazy } from 'react';
 import './App.css';
 import LinearProgress from '@material-ui/core/LinearProgress';
-import Section from './Components/Section';
+import Section from './components/Section';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUser } from './redux/auth/auth_operations';
 import { Switch } from 'react-router-dom';
@@ -11,16 +11,16 @@ import PublicRoute from './PublicRoute';
 import AppBar from './components/AppBar/AppBar';
 
 const HomePage = lazy(() =>
-  import('./Components/AppBar/HomePage' /* webpackChunkName: "homePage" */),
+  import('./components/AppBar/HomePage' /* webpackChunkName: "homePage" */),
 );
 const Contacts = lazy(() =>
   import('./components/Contacts' /* webpackChunkName: "contacts" */),
 );
 const Login = lazy(() =>
-  import('./Components/Login/Login' /* webpackChunkName: "Login" */),
+  import('./components/Login/Login' /* webpackChunkName: "Login" */),
 );
 const Register = lazy(() =>
-  import('./Components/Register/Register' /* webpackChunkName: "Register" */),
+  import('./components/Register/Register' /* webpackChunkName: "Register" */),
 );
 const App = () => {
   const dispatch = useDispatch();
