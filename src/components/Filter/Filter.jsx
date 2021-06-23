@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-
+import React from 'react';
 import styles from './Filter.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import * as actions from '../../redux/phoneBook/actions';

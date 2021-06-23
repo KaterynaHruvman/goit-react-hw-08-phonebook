@@ -1,10 +1,10 @@
-import { NavLink } from "react-router-dom";
-
-import styles from "../../Routes/Route.module.css";
+import { NavLink } from 'react-router-dom';
+import React from 'react';
+import styles from '../../Routes/Route.module.css';
 
 const AuthNav = () => (
   <div>
-       <ul className={styles.list}>
+    <ul className={styles.list}>
       <li className={styles.item}>
         <NavLink
           exact
@@ -25,7 +25,7 @@ const AuthNav = () => (
           Login
         </NavLink>
       </li>
-    </ul>{" "}
+    </ul>{' '}
   </div>
 );
 export default AuthNav;

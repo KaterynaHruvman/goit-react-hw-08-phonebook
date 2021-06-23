@@ -5,7 +5,8 @@ import Section from './components/Section';
 import { useDispatch } from 'react-redux';
 import { getUser } from './redux/auth/auth_operations';
 import { Switch } from 'react-router-dom';
-
+import React from 'react';
+// import ReactDOM from 'react-dom';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 import AppBar from './components/AppBar/AppBar';

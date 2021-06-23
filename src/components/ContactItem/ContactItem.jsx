@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact } from '../../redux/phoneBook/phoneApiOperations';
 import { getUniqContact } from '../../redux/phoneBook/phoneSelector';
-
+import React from 'react';
 const ContactItem = () => {
   const dispatch = useDispatch();
   const onDeleteContact = id => {
